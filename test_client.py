@@ -48,9 +48,33 @@ class ToolPrintHandler(AsyncCallbackHandler):
 
 ######################################################################
 # 2. MCP 서버 목록 (예시 그대로)
-######################################################################
-with open('mcp.json','r') as f:
-    SERVERS = json.load(f)
+SERVERS = {
+    "math_service": {
+      "transport": "stdio",
+      "command": "python",
+      "args": ["./test_server.py"]
+    },
+    "Ref": {
+        "command": "npx",
+        "args": ["ref-tools-mcp@latest"],
+        "env": {
+          "REF_API_KEY": 'ref-434da24dca0efc855bae',
+      },"transport": "stdio"
+    },
+    "mcp-sequentialthinking-tools": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@xinzhongyouhai/mcp-sequentialthinking-tools",
+        "--key",
+        "e192bc88-dbf7-4dab-9d77-51e9d405c750"
+      ]
+    }
+}
+
 
 ######################################################################
 # 3. 에이전트 + 비휘발성 메모리 제거 (MemorySaver만 사용)

@@ -33,7 +33,7 @@ SERVERS = SERVERS = {"ppt_preview": {
     },
 
     "exa": {
-      "transport": "stdio",
+      "transport": "sse",
       "command": "npx",
       "args": [
         "-y",
@@ -46,7 +46,7 @@ SERVERS = SERVERS = {"ppt_preview": {
     },
 
     "mcp-sequentialthinking-tools": {
-      "transport": "stdio",
+      "transport": "sse",
       "command": "npx",
       "args": [
         "-y",
