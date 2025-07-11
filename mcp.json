@@ -3,36 +3,21 @@
     "math_service": {
       "transport": "stdio",
       "command": "python",
-      "args": ["./test_server.py"]
+      "args": ["./ppt_server.py"]
     },
-    "tavily-mcp": {
+    "exa": {
       "command": "npx",
       "args": [
         "-y",
         "@smithery/cli@latest",
         "run",
-        "@tavily-ai/tavily-mcp",
+        "exa",
         "--key",
         "e192bc88-dbf7-4dab-9d77-51e9d405c750",
         "--profile",
         "voluntary-owl-BMcWTc"
       ],
-      "transport": "stdio"
-    },
-    "pdf-reader-mcp": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@smithery/cli@latest",
-        "run",
-        "@sylphxltd/pdf-reader-mcp",
-        "--key",
-        "e192bc88-dbf7-4dab-9d77-51e9d405c750",
-        "--profile",
-        "voluntary-owl-BMcWTc"
-      ]
-      ,
-      "transport": "stdio"
+      "transport":"stdio"
     },
     "mcp-sequentialthinking-tools": {
       "transport": "stdio",
